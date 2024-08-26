@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradingView Full Screen</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .tradingview-widget-container {
+            height: 100vh;
+            width: 100vw;
+        }
+        .logo {
+            position: absolute;
+            bottom: 10px;
+            left: 25px;
+            width: 80px; /* Bạn có thể điều chỉnh kích thước logo */
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="tradingview-widget-container">
+        <div id="tradingview_80a0d"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+            new TradingView.widget({
+                "width": "100%",
+                "height": "100%",
+                "symbol": "BINANCE:BTCUSDT",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "light",
+                "style": "1",
+                "locale": "vi_VN",
+                "toolbar_bg": "#f1f3f6",
+                "enable_publishing": false,
+                "allow_symbol_change": true,
+                "hide_side_toolbar": false,
+                "hide_top_toolbar": false,
+                "save_image": false,
+                "container_id": "tradingview_80a0d"
+            });
+        </script>
+    </div>
+    <img src="https://bmasshd.click/logo/bm.png" alt="Logo" class="logo">
+</body>
+</html>
